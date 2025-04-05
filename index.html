@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Excusas Manu</title>
+</head>
+<body onload="generateExcuse()">
+    <div class="container">
+        <h1>¡No me lo vas a creer, pero...</h1>
+        <p id="excuse">Mi gato tiró mi desayuno</p>
+    </div>
+    <script>
+        function generateExcuse() {
+            var who = ['Mi gato', 'Mi primo', 'El vecino', 'Un fantasma'];
+            var action = ['se comió', 'tiró', 'perdió', 'rompió'];
+            var what = ['mi desayuno', 'mi mochila', 'las llaves', 'mi teléfono'];
+            var when = ['antes de salir', 'cuando dormía', 'mientras hacía tarea', 'cuando iba a la escuela'];
+
+            var randomWho = who[Math.floor(Math.random() * who.length)];
+            var randomAction = action[Math.floor(Math.random() * action.length)];
+            var randomWhat = what[Math.floor(Math.random() * what.length)];
+            var randomWhen = when[Math.floor(Math.random() * when.length)];
+
+            var excuse = randomWho + " " + randomAction + " " + randomWhat + " " + randomWhen + ".";
+            document.getElementById("excuse").innerHTML = excuse;
+        }
+    </script>
+</body>
+</html>
+
